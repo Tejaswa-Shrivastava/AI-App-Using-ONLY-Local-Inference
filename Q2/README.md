@@ -94,24 +94,7 @@ python app.py
    - Adjust the temperature (creativity)
    - Click "Generate"
 
-## Project Structure
 
-```
-.
-├── app.py                # Main FastAPI application
-├── requirements.txt      # Python dependencies
-├── README.md            # This file
-├── static/              # Static files (CSS/JS)
-│   └── style.css       # Custom styles
-└── templates/           # HTML templates
-    └── index.html       # Main frontend template
-```
-
-## Customization
-
-### Adding New Writing Styles
-
-Edit the `WRITING_STYLES` dictionary in `app.py` to add or modify writing styles. Each style should have a unique key and a prompt template that includes `{topic}` where the user's input should be inserted.
 
 ### Changing the Model
 
