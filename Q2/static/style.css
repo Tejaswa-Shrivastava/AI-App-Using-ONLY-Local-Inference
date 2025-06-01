@@ -1,0 +1,136 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animation for the generate button */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+#generateBtn:active {
+    animation: pulse 0.3s ease;
+}
+
+/* Smooth transitions */
+#output, input, select, button, .fade-in {
+    transition: all 0.3s ease;
+}
+
+/* Custom range input styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4f46e5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    background: #4338ca;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Fade in animation for output */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#output div {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+    
+    .md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .md\:col-span-2 {
+        grid-column: span 1;
+    }
+}
+
+/* Custom styles for the output area */
+#output {
+    min-height: 150px;
+    max-height: 500px;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+/* Style for the copy button */
+#copyBtn {
+    transition: all 0.2s ease;
+}
+
+#copyBtn:hover {
+    text-decoration: underline;
+}
+
+/* Style for the generation info */
+#generationInfo {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Style for the model info */
+#modelInfo {
+    font-family: monospace;
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Style for the style info */
+#styleInfo {
+    color: #4b5563;
+}
